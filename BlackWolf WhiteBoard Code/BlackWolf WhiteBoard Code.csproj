@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0639738A-4C12-441C-90CA-53737AB01A6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlackWolf_WhiteBoard_Code</RootNamespace>
+    <AssemblyName>BlackWolf WhiteBoard Code</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>BlackWolf WhiteBoard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Crm.Sdk.Proxy.2015.7.1.0\lib\net452\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.identitymodel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.7.0.0\lib\net35\microsoft.identitymodel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Client, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xrm.Client.2015.7.0.0\lib\net452\Microsoft.Xrm.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.34\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Deployment, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xrm.Sdk.Deployment.2015.7.1.1\lib\net452\Microsoft.Xrm.Sdk.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.Workflow.9.0.2.34\lib\net462\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountPlugin.cs" />
+    <Compile Include="AdjustBookingTimeOnCreationofTimeStamp.cs" />
+    <Compile Include="AdjustProductInventory.cs" />
+    <Compile Include="AdjustRTVProduct.cs" />
+    <Compile Include="AdminCloseBookings.cs" />
+    <Compile Include="ApprovedRevisedItem.cs" />
+    <Compile Include="ApproveProductStructureAsFamily.cs" />
+    <Compile Include="BookAbleResourceBookingCalculation.cs" />
+    <Compile Include="CalculateChildWOSTCount.cs" />
+    <Compile Include="CalculateWOAndWOSTHealth.cs" />
+    <Compile Include="CalculateWOAndWOSTHealthPredictedSpendAndGenerateWOHealthLog.cs" />
+    <Compile Include="CalculateWorkOrderHealth.cs" />
+    <Compile Include="CalculateWOSTAmountOnUpdateOfBSTTimeSpent.cs" />
+    <Compile Include="CalculateWOSTHealth.cs" />
+    <Compile Include="CancelPOPOnCancelationPO.cs" />
+    <Compile Include="ManageInventoryForBlackWolfPart.cs" />
+    <Compile Include="ClosePostedWorkOrdersRelatedToOpprotunity.cs" />
+    <Compile Include="CountQuoteServiceItems.cs" />
+    <Compile Include="CreateIncidentalWOSOnCreditCardPayment.cs" />
+    <Compile Include="CreatePOPOnExistiingPOForWOP.cs" />
+    <Compile Include="CreatePurchaseOrderForWOSublets.cs" />
+    <Compile Include="CreatePurchaseOrderReceipt.cs" />
+    <Compile Include="CreateQuoteProductForCore.cs" />
+    <Compile Include="CreateScheduledBookingForInCompleteReturnWOST.cs" />
+    <Compile Include="createWOPForProductUsingBarcode.cs" />
+    <Compile Include="CreateWorkOrderProductForCore.cs" />
+    <Compile Include="DeleteWorkOrderProjectTask.cs" />
+    <Compile Include="MakeQuoteFirstWorkOrderAvailableForBooking.cs" />
+    <Compile Include="ManageBSTOfBookingBasedOnWOST.cs" />
+    <Compile Include="ManageCreditCardPayment.cs" />
+    <Compile Include="ManageWOSTHealthLog.cs" />
+    <Compile Include="MapActivityToOpportunity.cs" />
+    <Compile Include="MapFirstWOSTinWOP.cs" />
+    <Compile Include="MapUpdatedPartNumberOnChildEntites.cs" />
+    <Compile Include="MapWorkOrderStatusToText.cs" />
+    <Compile Include="MapWOSTUpdatedHealthOnBRB.cs" />
+    <Compile Include="Model\Task.cs" />
+    <Compile Include="Model\Vehicle.cs" />
+    <Compile Include="Model\WOPMainBPF.cs" />
+    <Compile Include="Model\WOSTandQSTObject.cs" />
+    <Compile Include="PreventProjectTaskDeletion.cs" />
+    <Compile Include="PreventWOStatusToBeClosePosted.cs" />
+    <Compile Include="PreventWOSTTimeStampDeletion.cs" />
+    <Compile Include="QuoteServiceTaskCalculation.cs" />
+    <Compile Include="ReceiveRTVProductAmount.cs" />
+    <Compile Include="RejectQuoteService.cs" />
+    <Compile Include="removePOPFromPOForWOP.cs" />
+    <Compile Include="RTVProductManagement.cs" />
+    <Compile Include="SyncPurchaseNameWithProductNameOnProductEntity.cs" />
+    <Compile Include="UpdateBSTNameOnUpdateWOSTName.cs" />
+    <Compile Include="UpdatePOSubStatusBasedOnSystemStatus.cs" />
+    <Compile Include="UpdateTimeSpentOnBookingAndBookingAmount.cs" />
+    <Compile Include="UpdateVendorInWOProudcts.cs" />
+    <Compile Include="VehiclePlugin.cs" />
+    <Compile Include="WOPANDWOSTStatusMatrix.cs" />
+    <Compile Include="WOPMainBPFPlugin.cs" />
+    <Compile Include="WOSTAndWorkOrderStatusMatrix.cs" />
+    <Compile Include="DeleteCancelledQuoteProjectTasks.cs" />
+    <Compile Include="DeleteScheduledBookingsForClosedPostedSystemStatus.cs" />
+    <Compile Include="FlagOpportuntiyForAdminHelp.cs" />
+    <Compile Include="FlagWorkOrderForAdminHelp.cs" />
+    <Compile Include="MapWorkOrderBWStatusToProjectTask.cs" />
+    <Compile Include="Model\BookableResource.cs" />
+    <Compile Include="Model\Payment.cs" />
+    <Compile Include="Model\ResourceRequirement.cs" />
+    <Compile Include="PickWOSTAndStartBooking.cs" />
+    <Compile Include="Updatepaymentsonopportunities.cs" />
+    <Compile Include="CopyWOServiceTaskInBooking.cs" />
+    <Compile Include="CreateContactOnCreationofAccount.cs" />
+    <Compile Include="CreateDemageRecordForResource.cs" />
+    <Compile Include="CreatePORceiptAndRelateToPOProduct.cs" />
+    <Compile Include="CreateProductPurchaseHistoryOnReceivedOfPOP.cs" />
+    <Compile Include="CreateProjectAndProjectTask.cs" />
+    <Compile Include="CreatePurchaseOrderforPreferredSupplier.cs" />
+    <Compile Include="CreateReviseQuote.cs" />
+    <Compile Include="CreateReviseQuoteProjectTasks.cs" />
+    <Compile Include="CreateStandardWorkOrdersOnCreationofOpportunity.cs" />
+    <Compile Include="CreateSubletForPurchaseOrderShippingFee.cs" />
+    <Compile Include="CreateTaskForBookingNeedMoreTime.cs" />
+    <Compile Include="CreateWorkOrderProjectAndProjectTasksFromQuote.cs" />
+    <Compile Include="MaintainVendorQuote.cs" />
+    <Compile Include="CreateWorkOrder.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="EntityFactory.cs" />
+    <Compile Include="GeneratePurchaseOrderReceiptProducts.cs" />
+    <Compile Include="GenerateWorkOrderServiceTaskTimeStamps.cs" />
+    <Compile Include="GetCurrentUser.cs" />
+    <Compile Include="MaintainPartsPurchaseHistory.cs" />
+    <Compile Include="ManageInventoryAdjustmentForCustomerPart.cs" />
+    <Compile Include="ManageProjectTasksForQuote.cs" />
+    <Compile Include="ManageProjectTasksForQuoteService.cs" />
+    <Compile Include="ManageProjectTasksForQuoteServiceTask.cs" />
+    <Compile Include="ManageProjectTasksForWorkOrder.cs" />
+    <Compile Include="ManageProjectTasksForWorkOrderServiceTask.cs" />
+    <Compile Include="ManageRevisedItem.cs" />
+    <Compile Include="ManageSubjectTreeHierarchyFromProduct.cs" />
+    <Compile Include="ManageWBSIDForQuoteEntities.cs" />
+    <Compile Include="MapBookingSrvTaskCompleteTOWoSrvTask.cs" />
+    <Compile Include="MapIncidentTypeInQuote.cs" />
+    <Compile Include="MapNewlyCreatedWOSTToInProgressBookingForDivideTime.cs" />
+    <Compile Include="MapProductPartNumberToProductInventory.cs" />
+    <Compile Include="MapRowAndBinToWorkOrderProduct.cs" />
+    <Compile Include="MapWOSTTimeStampBookingToWOST.cs" />
+    <Compile Include="Methods.cs" />
+    <Compile Include="Model\BookableResourceBooking.cs" />
+    <Compile Include="Model\BookingJournal.cs" />
+    <Compile Include="Model\BookingServiceTask.cs" />
+    <Compile Include="CreateProductFromDescriptionAndRelatetoProductFamily.cs" />
+    <Compile Include="Model\BookingTimeStamp.cs" />
+    <Compile Include="Model\Child_ServiceTemplateType.cs" />
+    <Compile Include="Model\IncidentTypeProduct.cs" />
+    <Compile Include="Model\IncidentTypeService.cs" />
+    <Compile Include="Model\IncidentTypeServiceTask.cs" />
+    <Compile Include="Model\InventoryAdjustment.cs" />
+    <Compile Include="Model\InventoryAdjustmentProduct.cs" />
+    <Compile Include="Model\PriceMarkup.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\ProductInventory.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="Model\ProjectTask.cs" />
+    <Compile Include="Model\PurchaseOrderProduct.cs" />
+    <Compile Include="Model\PurchaseOrderReceipt.cs" />
+    <Compile Include="Model\PurchaseOrder.cs" />
+    <Compile Include="Model\PurchaseOrderReceiptProduct.cs" />
+    <Compile Include="Model\Quote.cs" />
+    <Compile Include="Model\QuoteProduct.cs" />
+    <Compile Include="Model\QuoteService.cs" />
+    <Compile Include="Model\QuoteServiceTask.cs" />
+    <Compile Include="Model\QuoteSublet.cs" />
+    <Compile Include="Model\RevisedItem.cs" />
+    <Compile Include="Model\RTV Product.cs" />
+    <Compile Include="Model\RTV.cs" />
+    <Compile Include="Model\Subject.cs" />
+    <Compile Include="Model\VendorQuote.cs" />
+    <Compile Include="Model\WOProductReturnLog.cs" />
+    <Compile Include="Model\WorkOrder.cs" />
+    <Compile Include="Model\WorkOrderHealthLog.cs" />
+    <Compile Include="Model\WorkOrderProduct.cs" />
+    <Compile Include="Model\WorkOrderServiceTask.cs" />
+    <Compile Include="Model\WorkOrderServiceTaskHealthLog.cs" />
+    <Compile Include="Model\WorkOrderServiceTaskTimeStamp.cs" />
+    <Compile Include="Model\WorkOrderSublet.cs" />
+    <Compile Include="MoveQuoteServiceItemstoDifferentQuoteService.cs" />
+    <Compile Include="MoveQuoteServicetoDifferentQuote.cs" />
+    <Compile Include="OnDeleteOfBRBDeleteWOSTTimeStamp.cs" />
+    <Compile Include="OnUpdateofWorkOrderHealthGenerateLog.cs" />
+    <Compile Include="OnUpdateofWOSTHealthCalculateScheduledBookingHealth.cs" />
+    <Compile Include="PickWorkOrderAvialbleForBookingBasedOnProjectTaskWBSID.cs" />
+    <Compile Include="PreventCompletedBookingDeletionforBWTechnicain.cs" />
+    <Compile Include="ProductReturntoVendorAndInventoryAdjustment.cs" />
+    <Compile Include="ProductShippedToVendorAndInventoryAdjustment.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublishAndSetFamilyofProduct.cs" />
+    <Compile Include="QtSrvTaskAndWOSrvTask_SyncQtSrvTaskAndWOSrvTaskToParentEntity.cs" />
+    <Compile Include="QuoteProductCalculation.cs" />
+    <Compile Include="QuoteServiceCalculation.cs" />
+    <Compile Include="SyncPOLineStatusWithWOProductLineStatus.cs" />
+    <Compile Include="TechnicianClockOutFromBooking.cs" />
+    <Compile Include="Temp Resouce Plugin.cs" />
+    <Compile Include="TempCalculatePredictedSpendOnchangeOFPercentComplete.cs" />
+    <Compile Include="TempPluginCodeFORwoproductreturnlog.cs" />
+    <Compile Include="UpdateFSentitynameonupdateofprojecttask.cs" />
+    <Compile Include="UpdateParentMinutesOnCreationofChild.cs" />
+    <Compile Include="UpdateParentRecordBasedOnChildEntityActivity.cs" />
+    <Compile Include="UpdateRegardingOnCompleteorCloseOfActivity.cs" />
+    <Compile Include="UpdateWorkOrderProductAmountOnUpdateofPOProductAmount.cs" />
+    <Compile Include="UpdateWorkOrderProductFieldsFromProduct.cs" />
+    <Compile Include="UpdateWorkOrderSubStatusBasedOnBooking.cs" />
+    <Compile Include="VerifyQuoteProductAndQuoteSubletVendorSelected.cs" />
+    <Compile Include="WorkOrderEntityCalculation.cs" />
+    <Compile Include="WorkOrderProductCalculation.cs" />
+    <Compile Include="WorkOrderServcieTaskCalculation.cs" />
+    <Compile Include="WorkOrderSubletCalculation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BlackWolf WhiteBoard.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Javascript\ap360_account.js" />
+    <Content Include="Javascript\ap360_bookableresourcebooking.js" />
+    <Content Include="Javascript\ap360_bookingserviceTask.js" />
+    <Content Include="Javascript\ap360_IncidentTypeProduct.js" />
+    <Content Include="Javascript\ap360_IncidentTypeService.js" />
+    <Content Include="Javascript\ap360_incidenttypeservicetask.js" />
+    <Content Include="Javascript\ap360_inventoryadjustment.js" />
+    <Content Include="Javascript\ap360_Invnentoryadjustmentproduct.js" />
+    <Content Include="Javascript\ap360_Lead.js" />
+    <Content Include="Javascript\ap360_opportunity.js" />
+    <Content Include="Javascript\ap360_payments.js" />
+    <Content Include="Javascript\ap360_Product.js" />
+    <Content Include="Javascript\ap360_productInventory.js" />
+    <Content Include="Javascript\ap360_purchaseorder.js" />
+    <Content Include="Javascript\ap360_PurchaseOrderProduct.js" />
+    <Content Include="Javascript\ap360_Quote.js" />
+    <Content Include="Javascript\ap360_QuoteProduct.js" />
+    <Content Include="Javascript\ap360_quoteservice.js" />
+    <Content Include="Javascript\ap360_quoteservicetask.js" />
+    <Content Include="Javascript\ap360_QuoteSublet.js" />
+    <Content Include="Javascript\ap360_RevisedItem.js" />
+    <Content Include="Javascript\ap360_rtv.js" />
+    <Content Include="Javascript\ap360_rtvproduct.js" />
+    <Content Include="Javascript\ap360_Task.js" />
+    <Content Include="Javascript\ap360_Vehicle.js" />
+    <Content Include="Javascript\ap360_WorkOrder.js" />
+    <Content Include="Javascript\ap360_WorkOrderProduct.js" />
+    <Content Include="Javascript\ap360_workorderservicetask.js" />
+    <Content Include="Javascript\ap360_WorkOrderSublet.js" />
+    <Content Include="Javascript\ap360_WOSTTimeStamps.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
